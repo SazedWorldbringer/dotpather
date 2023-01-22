@@ -18,4 +18,10 @@ describe("dotpather", () => {
 
     expect(lookup({ check: { that: { attribute: 666 } } })).toBe(666)
   })
+
+  it("should return undefined if path not found", () => {
+    const lookup = dotpather("invalid.path");
+
+    expect(lookup({ valiid: { path: true } })).toBeUndefined();
+  })
 })
