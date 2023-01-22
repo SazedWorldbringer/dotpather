@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "standard": "^5.4.1",
-    "tape": "^4.4.0"
+    "tape": "^4.4.0",
+    "typescript": "^4.9.4"
   }
 }
