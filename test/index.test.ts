@@ -12,4 +12,10 @@ describe("dotpather", () => {
 
     expect(lookup({ check: { derp: true } })).toStrictEqual({ derp: true });
   })
+
+  it("should find nested values", () => {
+    const lookup = dotpather("check.that.attribute");
+
+    expect(lookup({ check: { that: { attribute: 666 } } })).toBe(666)
+  })
 })
