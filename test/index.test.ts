@@ -24,4 +24,11 @@ describe("dotpather", () => {
 
     expect(lookup({ valiid: { path: true } })).toBeUndefined();
   })
+
+  it("should return falsey values", () => {
+    const lookup = dotpather("falsey.value");
+
+    expect(lookup({falsey: {value: false}})).toBeFalsy();
+    expect(lookup({falsey: {value: null}})).toBeNull();
+  })
 })
