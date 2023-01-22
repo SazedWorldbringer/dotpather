@@ -1,5 +1,5 @@
 "use strict";
-module.exports = dotpath;
+Object.defineProperty(exports, "__esModule", { value: true });
 function dotpath(str) {
     var parts = str.toString().split('.');
     var len = parts.length;
@@ -14,3 +14,4 @@ function dotpath(str) {
         return obj;
     };
 }
+exports.default = dotpath;

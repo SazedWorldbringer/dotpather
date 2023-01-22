@@ -1,6 +1,6 @@
-export default function dotpath (str) {
-  var parts = str.toString().split('.')
-  var len = parts.length
+export default function dotpath (str: string) {
+  const parts = str.split('.')
+  const len = parts.length
 
   return function parse (obj) {
     var testKey
