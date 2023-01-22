@@ -1,6 +1,4 @@
-module.exports = dotpath
-
-function dotpath (str) {
+export default function dotpath (str) {
   var parts = str.toString().split('.')
   var len = parts.length
 
