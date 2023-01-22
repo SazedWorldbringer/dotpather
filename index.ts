@@ -1,11 +1,13 @@
-export default function dotpath (str: string) {
+type FixMeLater = any
+
+export default function dotpath(str: string) {
   const parts = str.split('.')
   const len = parts.length
 
-  return function parse (obj) {
-    var testKey
+  return function parse(obj: FixMeLater) {
+    let testKey
 
-    for (var i = 0; i < len; ++i) {
+    for (let i = 0; i < len; ++i) {
       testKey = parts[i]
 
       if (!obj) return
