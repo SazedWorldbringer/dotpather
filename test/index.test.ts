@@ -31,4 +31,10 @@ describe("dotpather", () => {
     expect(lookup({falsey: {value: false}})).toBeFalsy();
     expect(lookup({falsey: {value: null}})).toBeNull();
   })
+
+  it("should work on arrays", () => {
+    const lookup = dotpather("arr.1");
+
+    expect(lookup({arr: [44, 22]})).toBe(22);
+  })
 })
